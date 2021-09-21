@@ -7,9 +7,8 @@ controllers.addEventListener('change', handleChange);
 
 const handleStyle = {
   style: btn.style,
-  innerText: btn.innerText,
   text(value) {
-    this.innerText = value;
+    btn.innerText = value;
   },
   backgroundColor(value) {
     this.style.backgroundColor = value;
@@ -42,8 +41,25 @@ function handleChange(event) {
   const value = event.target.value;
 
   handleStyle[name](value);
-  showCss()
+  saveValues(name, value);
+  showCss();
 }
+
+
+function saveValues(name, value) {
+  localStorage[name] = value;
+};
+
+function setValue() {
+  const properties = Object.keys(localStorage);
+  properties.forEach(property => {
+    handleStyle[property](localStorage[property]);
+    controllers.elements[property] = localStorage[property];
+  });
+  showCss();
+}
+
+setValue();
 
 function showCss() {
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
