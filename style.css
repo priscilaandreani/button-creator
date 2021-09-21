@@ -1,0 +1,45 @@
+body{
+  margin: 8px;
+  background-color: #ccc;
+}
+
+label{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.creator { 
+  display: grid;
+  grid-gap: 20px;
+  padding: 30px;
+  grid-template-columns: 200px 1fr;
+}
+
+#controllers {
+  font-size: .875rem;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #eee;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.css { 
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  
+  font-family: 'Fira Code', monospace;
+  color: #333;
+}
+
+.css span { 
+  display: block;
+  margin-bottom: 0.5rem;
+}
