@@ -43,3 +43,7 @@ input {
   display: block;
   margin-bottom: 0.5rem;
 }
+
+.btn {
+  border: 1px solid black;
+}
